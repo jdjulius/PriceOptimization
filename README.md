@@ -148,6 +148,30 @@ python prediction_model.py
 This command reads `data/raw/Competition_Data.csv`, trains the model, and saves
 the resulting pipeline to `model.pkl`.
 
+## API
+
+Serve the trained model through a FastAPI application.
+
+1. Install the API dependencies:
+   ```bash
+   pip install fastapi uvicorn joblib pandas scikit-learn
+   ```
+2. Ensure `model.pkl` exists by running:
+   ```bash
+   python prediction_model.py
+   ```
+3. Start the API with:
+   ```bash
+   uvicorn api:app --reload
+   ```
+   The server will be available at `http://127.0.0.1:8000`.
+4. Send a POST request to `/predict` with JSON containing the following fields:
+   - `Store_ID`
+   - `Item_ID`
+   - `Price`
+   - `Item_Quantity`
+   - `Competition_Price`
+
 ## Contact
 
 For questions or collaboration, please contact Julio.
