@@ -22,6 +22,7 @@ The primary goals of this project are:
 - **analysis/**
   - `DataAnalysis.ipynb`: Notebook for detailed data analysis, including data cleaning, transformation, and statistical summaries.
   - `VisualsationAnalysis.ipynb`: Notebook for visualizing trends, comparisons, and distributions in the sales data.
+- `prediction_model.py`: Script to train a sales prediction model and save it as `model.pkl`.
 
 ## Data Dictionary
 
@@ -134,6 +135,18 @@ Potential future enhancements to the project include:
 - Developing predictive models to forecast sales based on pricing strategies.
 - Automating the analysis pipeline for real-time insights.
 - Expanding visualizations to include geographic trends and customer segmentation.
+
+## Prediction Model
+
+The repository includes `prediction_model.py`, which trains a Random Forest model
+to predict `Sales_Amount`. After installing the required libraries, run:
+
+```bash
+python prediction_model.py
+```
+
+This command reads `data/raw/Competition_Data.csv`, trains the model, and saves
+the resulting pipeline to `model.pkl`.
 
 ## Contact
 
